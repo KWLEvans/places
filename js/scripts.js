@@ -13,11 +13,16 @@ function Place(city, country, landmarks, timeOfYear, notes) {
 //Front-end
 //////////////////////////////
 $(function() {
-  var city = $("#city").val();
-  var country = $("#country").val();
-  var landmarks = $("#landmarks").val();
-  var timeOfYear = $("#timeOfYear").val();
-  var notes = $("#notes").val();
 
-  
+  $("#placeObject").submit(function(event) {
+    event.preventDefault();
+
+    var city = $("#city").val();
+    var country = $("#country").val();
+    var landmarks = $("#landmarks").val();
+    var timeOfYear = $("#timeOfYear").val();
+    var notes = $("#notes").val();
+
+    var placeObject = new Place(city, country, landmarks, timeOfYear, notes);
+  });
 });
